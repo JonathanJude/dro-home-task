@@ -39,7 +39,7 @@ class _StoreDetailState extends State<StoreDetail> {
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  SizedBox(height: 32),
+                  SizedBox(height: 22),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -240,8 +240,24 @@ class _StoreDetailState extends State<StoreDetail> {
                       ],
                     ),
                   ),
-                  SizedBox(height: 16),
-                  ActionButton(
+                  DROSizedBox(height: 14),
+                  // ActionButton(
+                  //   text: 'Add to Bag',
+                  //   icon: MdiIcons.cart,
+                  //   onPressed: () => model.onAddProductToBag(
+                  //     context,
+                  //     widget.product,
+                  //     model.quantity,
+                  //   ),
+                  // )
+                ],
+              )),
+              Positioned(
+                bottom: 15,
+                right: 0,
+                left: 0,
+                child: Center(
+                  child: ActionButton(
                     text: 'Add to Bag',
                     icon: MdiIcons.cart,
                     onPressed: () => model.onAddProductToBag(
@@ -249,9 +265,9 @@ class _StoreDetailState extends State<StoreDetail> {
                       widget.product,
                       model.quantity,
                     ),
-                  )
-                ],
-              )),
+                  ),
+                ),
+              ),
               BagPanel(
                 size: size,
                 isVisible: false,
