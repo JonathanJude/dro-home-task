@@ -1,0 +1,46 @@
+name: drohealth_assessment
+description: DRO Health Home task assessment
+publish_to: 'none' 
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  intl: ^0.16.1
+  material_design_icons_flutter: 4.0.5145
+  sliding_up_panel: ^1.0.2
+  provider: 3.0.0
+  flutter_overlay_loader: 0.0.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_launcher_icons: ^0.7.5
+flutter_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/images/raster/logo.png"
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/raster/
+    - assets/images/raster/products/
+    - assets/images/svg/
+
+  fonts:
+    - family: ProximaNova
+      fonts:
+        - asset: assets/fonts/proxima-light.ttf
+          weight: 300
+        - asset: assets/fonts/proxima-regular.ttf
+          weight: 400
+        - asset: assets/fonts/proxima-medium.ttf
+          weight: 500
+        - asset: assets/fonts/proxima-bold.otf
+          weight: 700
+        - asset: assets/fonts/proxima-black.otf
+          weight: 900
