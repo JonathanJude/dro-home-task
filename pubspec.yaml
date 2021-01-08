@@ -29,7 +29,6 @@ flutter:
   assets:
     - assets/images/raster/
     - assets/images/raster/products/
-    - assets/images/svg/
 
   fonts:
     - family: ProximaNova
