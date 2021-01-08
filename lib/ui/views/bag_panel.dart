@@ -45,6 +45,7 @@ class _BagPanelState extends State<BagPanel> {
           topRight: Radius.circular(20),
         ),
         isDraggable: true,
+        padding: EdgeInsets.zero,
         panel: Consumer<BagProvider>(
           builder: (context, bagProvider, _) => CartWidget(
             controller: widget.panelController,

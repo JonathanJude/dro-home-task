@@ -119,7 +119,7 @@ class _StoreScreenState extends State<StoreScreen> {
                           ),
                         ),
                       ),
-                DROSizedBox(height: 0.8),
+                SizedBox(height: size.height * 0.09)
               ],
             ),
             Consumer<BagProvider>(
