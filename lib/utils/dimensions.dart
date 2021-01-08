@@ -52,10 +52,6 @@ class _AppInsets {
     sizer = _AppDimension(context);
   }
 
-  // static _AppInsets init(BuildContext context) {
-  //   return _AppInsets(context);
-  // }
-
   EdgeInsets get zero {
     return EdgeInsets.zero;
   }

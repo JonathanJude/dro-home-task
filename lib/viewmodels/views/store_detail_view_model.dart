@@ -18,7 +18,7 @@ class StoreDetailViewModel extends BaseViewModel {
   onAddProductToBag(BuildContext context, Product product, [int quantity = 1]) async {
     BagProvider bagProvider = Provider.of<BagProvider>(context);
 
-    //mock a netwrok call
+    //mock a network call
     DROLoader.show(context);
     await Future.delayed(Duration(seconds: 1));
     DROLoader.hide();
@@ -45,8 +45,6 @@ class StoreDetailViewModel extends BaseViewModel {
           },
         );
       });
-
-    // return true;
   }
 
 }

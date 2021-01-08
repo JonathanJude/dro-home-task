@@ -32,50 +32,50 @@ class _StoreQuantityWidgetState extends State<StoreQuantityWidget> {
     final scaler = AppScaleUtil(context);
 
     return Container(
-      width: size.width * .24,
+      width: size.width * .26,
       alignment: Alignment.center,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          GestureDetector(
-            onTap: () {
-              if (value > 1) {
-                setState(() {
-                  value -= 1;
-                });
-                widget.onDecrement(value);
-              }
-            },
-            child: Padding(
-              // padding: const EdgeInsets.symmetric(horizontal: 5.0),
-              padding: scaler.insets.symmetric(horizontal: 1.0),
-              child: Text('-', style: TextStyle(fontSize: 30)),
+          Flexible(
+            child: GestureDetector(
+              onTap: () {
+                if (value > 1) {
+                  setState(() {
+                    value -= 1;
+                  });
+                  widget.onDecrement(value);
+                }
+              },
+              child: Padding(
+                padding: scaler.insets.symmetric(horizontal: 1.0),
+                child: Icon(Icons.remove, size: 25),
+              ),
             ),
           ),
           Padding(
-            // padding: EdgeInsets.symmetric(horizontal: 0.0),
             padding: scaler.insets.symmetric(horizontal: 0.0),
             child: Text(' $value ', style: TextStyle(fontSize: 20)),
           ),
-          GestureDetector(
-            onTap: () {
-              if (value >= 1) {
-                setState(() {
-                  value += 1;
-                });
-                widget.onIncrement(value);
-              }
-            },
-            child: Padding(
-              // padding: const EdgeInsets.symmetric(horizontal: 5.0),
-              padding: scaler.insets.symmetric(horizontal: 1.0),
-              child: Text('+', style: TextStyle(fontSize: 28)),
+          Flexible(
+            child: GestureDetector(
+              onTap: () {
+                if (value >= 1) {
+                  setState(() {
+                    value += 1;
+                  });
+                  widget.onIncrement(value);
+                }
+              },
+              child: Padding(
+                padding: scaler.insets.symmetric(horizontal: 2.0),
+                child: Icon(Icons.add, size: 25),
+              ),
             ),
           ),
         ],
       ),
-      // padding: EdgeInsets.symmetric(horizontal: 6, vertical: 2),
-      padding: scaler.insets.symmetric(horizontal: 1.3, vertical: 0.5),
+      padding: scaler.insets.symmetric(horizontal: 1.3, vertical: 0.8),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10),
         border: Border.all(color: Colors.grey),

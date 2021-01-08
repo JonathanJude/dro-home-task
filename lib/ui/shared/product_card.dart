@@ -1,5 +1,6 @@
 import 'package:drohealth_assessment/models/product.dart';
 import 'package:drohealth_assessment/ui/views/store_detail.dart';
+import 'package:drohealth_assessment/utils/intl_formatter.dart';
 import 'package:flutter/material.dart';
 
 class ProductCard extends StatelessWidget {
@@ -29,13 +30,11 @@ class ProductCard extends StatelessWidget {
           boxShadow: [
             BoxShadow(
               color: Color(0xFF0c3962).withOpacity(.12),
-              // color: Colors.white.withOpacity(.12),
               blurRadius: 12,
               offset: Offset(0, 3),
             ),
           ],
         ),
-        // margin: EdgeInsets.all(8.0),
         child: Card(
           child: Padding(
             padding: const EdgeInsets.all(8.0),
@@ -77,8 +76,13 @@ class ProductCard extends StatelessWidget {
                       color: Colors.grey,
                       borderRadius: BorderRadius.circular(10),
                     ),
-                    child: Text('₦' + product.amount.toStringAsFixed(2),
-                        style: TextStyle(color: Colors.white, fontSize: 12, fontFamily: 'Roboto')),
+                    child: Text(
+                        DROFormatter.formatCurrencyInput(
+                            product.amount.toStringAsFixed(2)),
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 12,
+                            fontFamily: 'Roboto')),
                   ),
                 )
               ],

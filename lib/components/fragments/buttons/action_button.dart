@@ -11,6 +11,9 @@ class ActionButton extends StatelessWidget {
   final String text;
   final bool disabled;
   final IconData  icon;
+  final double borderRadius;
+  final double height;
+  final double textFontSize;
 
   ActionButton({
     @required this.text,
@@ -19,6 +22,9 @@ class ActionButton extends StatelessWidget {
     this.color = appPurple,
     this.textColor = appWhite,
     this.icon,
+    this.borderRadius = 14.0,
+    this.height = 50.0,
+    this.textFontSize = 13.0,
   });
 
   @override
@@ -29,13 +35,13 @@ class ActionButton extends StatelessWidget {
             child: Opacity(
               opacity: disabled ? .4 : 1,
               child: Container(
-                height: 50.0,
+                height: height,
                 width: MediaQuery.of(context).size.width * .7,
                 child: FlatButton(
                   onPressed: disabled ? null : onPressed,
                   color: color,
                   shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(14.0)),
+                      borderRadius: BorderRadius.circular(borderRadius)),
                   child: Ink(
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(7.0),
@@ -43,14 +49,13 @@ class ActionButton extends StatelessWidget {
                     child: Container(
                       constraints: BoxConstraints(
                           maxWidth: MediaQuery.of(context).size.width,
-                          minHeight: 50.0),
+                          minHeight: height),
                       alignment: Alignment.center,
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                            icon == null ? SizedBox() : Icon(MdiIcons.cartOutline, size: 27),
                           Padding(
-                            // padding: scaler.insets.symmetric(horizontal: 4.0),
                             padding: scaler.insets.symmetric(
                               horizontal: 4.0,
                             ),
@@ -59,7 +64,7 @@ class ActionButton extends StatelessWidget {
                               textAlign: TextAlign.center,
                               style: TextStyle(
                                   color: textColor ?? Colors.white,
-                                  fontSize: 13,
+                                  fontSize: textFontSize,
                                   fontWeight: FontWeight.w600),
                             ),
                           ),

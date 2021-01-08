@@ -39,7 +39,7 @@ class _StoreDetailState extends State<StoreDetail> {
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  SizedBox(height: 22),
+                  SizedBox(height: 27),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -57,7 +57,6 @@ class _StoreDetailState extends State<StoreDetail> {
                               Icon(MdiIcons.cartOutline,
                                   color: Colors.white, size: 28),
                               Padding(
-                                // padding:  EdgeInsets.only(left: 5.0),
                                 padding: scaler.insets.only(left: 3.0),
                                 child: Text(bagProvider.productCount.toString(),
                                     style: TextStyle(
@@ -76,7 +75,6 @@ class _StoreDetailState extends State<StoreDetail> {
                   ),
                   SizedBox(height: 0),
                   Padding(
-                    // padding: const EdgeInsets.symmetric(horizontal: 18.0),
                     padding: scaler.insets.symmetric(horizontal: 3.5),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.start,
@@ -98,17 +96,14 @@ class _StoreDetailState extends State<StoreDetail> {
                                   fontWeight: FontWeight.w600)),
                         ),
                         Padding(
-                          // padding: const EdgeInsets.symmetric(vertical: 5.0),
                           padding: scaler.insets.symmetric(vertical: 0.5),
                           child: Text(
                               '${widget.product.category} - ${widget.product.grammage}',
                               style: TextStyle(
-                                  // fontSize: 15,
                                   fontSize: scaler.fontSizer.sp(32),
                                   fontWeight: FontWeight.w400)),
                         ),
                         Padding(
-                          // padding: const EdgeInsets.symmetric(vertical: 10.0),
                           padding: scaler.insets.symmetric(vertical: 1.0),
                           child: Row(
                             children: [
@@ -119,7 +114,6 @@ class _StoreDetailState extends State<StoreDetail> {
                                 minRadius: 28,
                               ),
                               Padding(
-                                // padding: const EdgeInsets.only(left: 13.0),
                                 padding: scaler.insets.only(left: 3.0),
                                 child: Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -129,12 +123,10 @@ class _StoreDetailState extends State<StoreDetail> {
                                       style: TextStyle(
                                         fontWeight: FontWeight.bold,
                                         color: Colors.grey,
-                                        // fontSize: 12
                                         fontSize: scaler.fontSizer.sp(26),
                                       ),
                                     ),
                                     Padding(
-                                      // padding: EdgeInsets.symmetric(vertical: 5.0),
                                       padding: scaler.insets
                                           .symmetric(vertical: 1.0),
                                       child: Text(
@@ -160,7 +152,6 @@ class _StoreDetailState extends State<StoreDetail> {
                               onIncrement: model.onQuantityChanged,
                             ),
                             Padding(
-                              // padding: const EdgeInsets.only(left: 14.0),
                               padding: scaler.insets.only(left: 2.0),
                               child: Text(
                                 widget.product.inPacks ? 'Pack(s)' : 'Unit(s)',
@@ -169,7 +160,6 @@ class _StoreDetailState extends State<StoreDetail> {
                             ),
                             Spacer(),
                             Padding(
-                              // padding: const EdgeInsets.symmetric(horizontal: 2.0),
                               padding: scaler.insets.symmetric(horizontal: 1.0),
                               child: Baseline(
                                   baseline: 4,
@@ -227,7 +217,6 @@ class _StoreDetailState extends State<StoreDetail> {
                           icon: MdiIcons.trashCanOutline,
                         ),
                         Padding(
-                          // padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 20),
                           padding: scaler.insets
                               .symmetric(vertical: 1.0, horizontal: 3),
                           child: Center(
@@ -241,15 +230,6 @@ class _StoreDetailState extends State<StoreDetail> {
                     ),
                   ),
                   DROSizedBox(height: 14),
-                  // ActionButton(
-                  //   text: 'Add to Bag',
-                  //   icon: MdiIcons.cart,
-                  //   onPressed: () => model.onAddProductToBag(
-                  //     context,
-                  //     widget.product,
-                  //     model.quantity,
-                  //   ),
-                  // )
                 ],
               )),
               Positioned(

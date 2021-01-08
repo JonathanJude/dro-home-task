@@ -2,6 +2,7 @@ import 'package:drohealth_assessment/components/fragments/dialogs/bag_dialog.dar
 import 'package:drohealth_assessment/models/cart_product.dart';
 import 'package:drohealth_assessment/models/product.dart';
 import 'package:drohealth_assessment/providers/bag_provider.dart';
+import 'package:drohealth_assessment/utils/intl_formatter.dart';
 import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:provider/provider.dart';
@@ -113,9 +114,11 @@ class _BagItemState extends State<BagItem> {
                   ],
                 ),
               ),
-              // Spacer(),
-              Text('N${widget.product.product.amount}',
-                  style: TextStyle(color: Colors.white, fontSize: 15)),
+              Text(
+                  DROFormatter.formatCurrencyInput(
+                      widget.product.product.amount.toString()),
+                  style: TextStyle(
+                      color: Colors.white, fontSize: 15, fontFamily: 'Roboto')),
             ],
           ),
         ),

@@ -1,6 +1,6 @@
 import 'package:intl/intl.dart';
 
-class AppFormatter {
+class DROFormatter {
   static String formatPhone(String tel) {
     if (tel.length == 10) {
       return "${tel.substring(0, 3)} ${tel.substring(3, 6)} ${tel.substring(6)}";
@@ -81,9 +81,9 @@ class AppFormatter {
   static String formatCurrencyInput(String amount) {
     final formatter = NumberFormat.currency(
       locale: "en_NG",
-      name: '',
-      symbol: "",
-      decimalDigits: 0,
+      name: 'NGN',
+      symbol: "₦",
+      decimalDigits: 2,
     );
     amount = amount.replaceAll(RegExp(r'[^0-9\.]'), "");
     final amountDouble = double.tryParse(amount);

@@ -32,21 +32,17 @@ const MaterialColor purple = const MaterialColor(
   },
 );
 
-// const Color appPurple = Color(0xFF2E1A63);
 const Color appYellow = Color(0xFFFFA940);
 const Color appRed = Color(0xFFbd0000);
 const Color appGrey = Color(0xFFF2F5F5);
 const Color appDarkGrey = Color(0xFFADB2B2);
-// const Color appGray = Color(0xFFE6F0F3);
 const Color appWhite = Color(0xFFFFFFFF);
 const Color appBlack = Color(0xFF000000);
 const Color appTransparent = Color(0x00000000);
 
-
-
 const Color appGray = Color(0xFF909090);
 const Color appDarkPurple = Color(0xFF7B4397);
-const Color appPurple = Color(0xFF9F5DE2);
+const Color appPurple = Color(0xFF7B4397);
 const Color appTurquoise = Color(0xFF0CB8B6);
 
 

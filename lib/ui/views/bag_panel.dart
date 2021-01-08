@@ -27,7 +27,6 @@ class _BagPanelState extends State<BagPanel> {
     return Consumer<BagProvider>(
       builder: (context, bagProvider, _) => SlidingUpPanel(
         controller: widget.panelController,
-        // controller: bagProvider.panelController,
         maxHeight: widget.size.height * .96,
         minHeight: widget.isVisible ? widget.size.height * 0.08 : 0.0,
         onPanelOpened: () {

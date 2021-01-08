@@ -38,7 +38,6 @@ class _StoreScreenState extends State<StoreScreen> {
               children: [
                 DROSizedBox(height: 4),
                 Padding(
-                  // padding: EdgeInsets.symmetric(vertical: 18.0),
                   padding: scaler.insets.symmetric(vertical: 2.0),
                   child: Text(
                     '${model.filteredProducts.length} item(s)',
@@ -60,7 +59,6 @@ class _StoreScreenState extends State<StoreScreen> {
                 !model.showSearch
                     ? DROSizedBox()
                     : Padding(
-                        // padding: const EdgeInsets.symmetric(horizontal: 18.0, vertical: 10),
                         padding: scaler.insets.symmetric(horizontal: 4.0, vertical: 2),
                         child: SizedBox(
                           height: 45,
@@ -71,7 +69,10 @@ class _StoreScreenState extends State<StoreScreen> {
                               labelStyle: TextStyle(color: Colors.white),
                               prefixIcon:
                                   Icon(Icons.search, color: Colors.grey),
-                              suffixIcon: Icon(Icons.clear, color: Colors.grey),
+                              suffixIcon: GestureDetector(
+                                onTap: model.onSearchTapped,
+                                child: Icon(Icons.clear, color: Colors.grey)
+                              ),
                               contentPadding:
                                   EdgeInsets.symmetric(horizontal: 20),
                               hintText: 'Search',
@@ -84,7 +85,7 @@ class _StoreScreenState extends State<StoreScreen> {
                                       BorderSide(color: Colors.grey, width: 1),
                                   borderRadius: BorderRadius.circular(30)),
                               hintStyle: TextStyle(
-                                  color: Colors.white54, fontSize: 12),
+                                  color: Colors.black, fontSize: 13),
                               border: new OutlineInputBorder(
                                 borderRadius: const BorderRadius.all(
                                   const Radius.circular(30.0),
@@ -100,7 +101,6 @@ class _StoreScreenState extends State<StoreScreen> {
                     ? Expanded(child: Center(child: DROSpinner()))
                     : Expanded(
                         child: Padding(
-                          // padding:  EdgeInsets.symmetric(horizontal: 5.0),
                           padding:  scaler.insets.symmetric(horizontal: 1.0),
                           child: GridView.builder(
                             itemCount: model.filteredProducts.length,
