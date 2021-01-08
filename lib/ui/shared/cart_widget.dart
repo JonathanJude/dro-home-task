@@ -25,7 +25,7 @@ class _CartWidgetState extends State<CartWidget> {
   Widget _bagWidget() {
     return Row(
       children: [
-        Icon(MdiIcons.cartOutline, color: Colors.white),
+        Icon(MdiIcons.purseOutline, color: Colors.white),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 6.0),
           child: Text('Bag', style: TextStyle(color: Colors.white)),

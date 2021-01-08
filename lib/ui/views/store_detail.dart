@@ -54,7 +54,7 @@ class _StoreDetailState extends State<StoreDetail> {
                               borderRadius: BorderRadius.circular(8)),
                           child: Row(
                             children: [
-                              Icon(MdiIcons.cartOutline,
+                              Icon(MdiIcons.purseOutline,
                                   color: Colors.white, size: 28),
                               Padding(
                                 padding: scaler.insets.only(left: 3.0),
@@ -209,12 +209,12 @@ class _StoreDetailState extends State<StoreDetail> {
                         ProductDetailItem(
                           title: 'CONSTITUENTS',
                           value: widget.product.constituents,
-                          icon: MdiIcons.pill,
+                          icon: MdiIcons.medicalBag,
                         ),
                         ProductDetailItem(
                           title: 'DISPENSED IN',
                           value: widget.product.inPacks ? 'Packs' : 'Unit',
-                          icon: MdiIcons.trashCanOutline,
+                          icon: MdiIcons.package
                         ),
                         Padding(
                           padding: scaler.insets
@@ -239,7 +239,7 @@ class _StoreDetailState extends State<StoreDetail> {
                 child: Center(
                   child: ActionButton(
                     text: 'Add to Bag',
-                    icon: MdiIcons.cart,
+                    icon: MdiIcons.medicalBag,
                     onPressed: () => model.onAddProductToBag(
                       context,
                       widget.product,

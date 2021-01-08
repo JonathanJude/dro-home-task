@@ -20,6 +20,8 @@ class StoreScreen extends StatefulWidget {
 }
 
 class _StoreScreenState extends State<StoreScreen> {
+  TextEditingController _searchFieldController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -47,7 +49,7 @@ class _StoreScreenState extends State<StoreScreen> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    StoreOptions(icon: MdiIcons.bluetoothConnect, onTap: () {}),
+                    StoreOptions(icon: MdiIcons.swapVertical, onTap: () {}),
                     StoreOptions(icon: MdiIcons.filterOutline, onTap: () {}),
                     StoreOptions(
                       icon: Icons.search,
@@ -59,10 +61,11 @@ class _StoreScreenState extends State<StoreScreen> {
                 !model.showSearch
                     ? DROSizedBox()
                     : Padding(
-                        padding: scaler.insets.symmetric(horizontal: 4.0, vertical: 2),
+                        padding: scaler.insets.symmetric(horizontal: 4.0, vertical: 1.5),
                         child: SizedBox(
                           height: 45,
                           child: TextField(
+                            controller: _searchFieldController,
                             decoration: InputDecoration(
                               filled: true,
                               fillColor: Colors.white24,
@@ -70,7 +73,10 @@ class _StoreScreenState extends State<StoreScreen> {
                               prefixIcon:
                                   Icon(Icons.search, color: Colors.grey),
                               suffixIcon: GestureDetector(
-                                onTap: model.onSearchTapped,
+                                onTap: (){
+                                  model.onSearch('');
+                                  _searchFieldController.clear();
+                                },
                                 child: Icon(Icons.clear, color: Colors.grey)
                               ),
                               contentPadding:
@@ -108,8 +114,8 @@ class _StoreScreenState extends State<StoreScreen> {
                             gridDelegate:
                                 SliverGridDelegateWithFixedCrossAxisCount(
                               crossAxisCount: 2,
-                              crossAxisSpacing: 1.0,
-                              mainAxisSpacing: 1.0,
+                              crossAxisSpacing: 4.0,
+                              mainAxisSpacing: 2.0,
                               childAspectRatio: 0.8,
                             ),
                             itemBuilder: (BuildContext context, int index) {

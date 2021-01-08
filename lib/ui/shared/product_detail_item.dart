@@ -23,7 +23,7 @@ class ProductDetailItem extends StatelessWidget {
         children: [
           Icon(icon, size: 26, color: appPurple),
           Padding(
-            padding: scaler.insets.symmetric(horizontal: 1.2),
+            padding: scaler.insets.symmetric(horizontal: 1.6),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -33,12 +33,12 @@ class ProductDetailItem extends StatelessWidget {
                         fontSize: 12,
                         fontWeight: FontWeight.w600)),
                 Padding(
-                  padding: scaler.insets.symmetric(vertical: 0.4),
+                  padding: scaler.insets.symmetric(vertical: 0.2),
                   child: Text(
                     value,
                     style: TextStyle(
                       color: appTurquoise,
-                      fontSize: 14,
+                      fontSize: 13,
                       fontWeight: FontWeight.w600,
                     ),
                   ),

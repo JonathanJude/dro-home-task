@@ -10,7 +10,7 @@ dependencies:
   flutter:
     sdk: flutter
   intl: ^0.16.1
-  material_design_icons_flutter: 4.0.5145
+  material_design_icons_flutter: 4.0.5755
   sliding_up_panel: ^1.0.2
   provider: 3.0.0
   flutter_overlay_loader: 0.0.2

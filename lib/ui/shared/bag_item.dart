@@ -105,11 +105,11 @@ class _BagItemState extends State<BagItem> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(widget.product.product.name,
-                        style: TextStyle(color: Colors.white, fontSize: 15)),
+                        style: TextStyle(color: Colors.white, fontSize: 13)),
                     Padding(
                       padding: const EdgeInsets.symmetric(vertical: 4.0),
                       child: Text(widget.product.product.category,
-                          style: TextStyle(color: Colors.white, fontSize: 13)),
+                          style: TextStyle(color: Colors.white, fontSize: 12)),
                     ),
                   ],
                 ),
@@ -118,7 +118,7 @@ class _BagItemState extends State<BagItem> {
                   DROFormatter.formatCurrencyInput(
                       widget.product.product.amount.toString()),
                   style: TextStyle(
-                      color: Colors.white, fontSize: 15, fontFamily: 'Roboto')),
+                      color: Colors.white, fontSize: 13, fontFamily: 'Roboto')),
             ],
           ),
         ),

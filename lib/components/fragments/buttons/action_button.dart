@@ -54,7 +54,7 @@ class ActionButton extends StatelessWidget {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                           icon == null ? SizedBox() : Icon(MdiIcons.cartOutline, size: 27),
+                           icon == null ? SizedBox() : Icon(icon, size: 27),
                           Padding(
                             padding: scaler.insets.symmetric(
                               horizontal: 4.0,
